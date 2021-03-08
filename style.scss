@@ -1,0 +1,44 @@
+$b-principal: url('./imgs/background.png');
+$o-hidden: hidden;
+$c-sombra: 6px 6px 12px rgba(52,58,64,1);
+
+body {
+  background: $b-principal;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  overflow: $o-hidden;
+
+  .mesa {
+    perspective: 100vw;
+    transform-style: preserve-3d;
+
+    .circulo {
+      display: none;
+      height: 200px;
+      left: calc(100vw - calc(50vw + 100px));
+      position: absolute;
+      top: calc(100vh - calc(50vh + 100px));
+      transition: transform 1s;
+      width: 200px;
+
+      &:nth-child(1)
+      {
+        display: block;
+      }
+
+      //&:nth-child(odd) {
+      //}
+
+      //&:nth-child(even) {
+      //}
+
+      img {
+        border-radius: 50%;
+        box-shadow: $c-sombra;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+  }
+}

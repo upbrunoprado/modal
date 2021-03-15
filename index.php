@@ -16,14 +16,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="./script.js" type="text/javascript"></script>
 
-  <title>Modal</title>
+  <title>Modalnetworks</title>
 </head>
 <body>
 
   <img id="IBackground" src="./imgs/background.png" alt="">
 
   <div class="mesa">
-
     <div id="DInfra" class="circulo">
       <p>Infraestrutura de Servidores</p>
       <img src="./imgs/infra-server.png" alt="">
@@ -56,11 +55,14 @@
       <p>Opensource</p>
       <img src="./imgs/opensource.png" alt="">
     </div>
-
   </div>
-   <!-- configuração de scroll <div><span data-radium="true">Desça a tela para<br>conhecer a P&amp;G</span>
-    <div class="scroll-mouse">
-    <div class="scroll-wheel"></div></div></div> -->
+
+  <div class="footer">
+    Desça a tela para<br>conhecer +</span>
+    <div class="d-flex">
+      <img src="imgs/scroll.gif" alt="" class="m-auto">
+    </div>
+  </div>
 
 </body>
 </html>

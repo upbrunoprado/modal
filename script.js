@@ -80,7 +80,6 @@ $(document).ready(function () {
 
   });
 
-
   $("body *").on("tap", function(e) {
     console.log("tap");
   });

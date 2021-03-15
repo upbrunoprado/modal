@@ -20,6 +20,8 @@
 </head>
 <body>
 
+  <img id="IBackground" src="./imgs/background.png" alt="">
+
   <div class="mesa">
 
     <div id="DInfra" class="circulo">
@@ -54,11 +56,11 @@
       <p>Opensource</p>
       <img src="./imgs/opensource.png" alt="">
     </div>
-    
+
   </div>
    <!-- configuração de scroll <div><span data-radium="true">Desça a tela para<br>conhecer a P&amp;G</span>
-    <div class="scroll-mouse">  
+    <div class="scroll-mouse">
     <div class="scroll-wheel"></div></div></div> -->
-  
+
 </body>
 </html>

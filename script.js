@@ -10,7 +10,15 @@ $(document).ready(function () {
     if (VSobe)
     {
       if ($(VADiv[0]).attr("translateZ") >= 200) {
+        /*
+        if (parseFloat($("#IBackground").css("zoom")) >= 0.76)
+        {
+          $("#IBackground").css("zoom", $("#IBackground").css("zoom") - 0.02);
+          $("#IBackground").css("top", "calc(" + $("#IBackground").css("top") + " + 12px)");
+        }/* */
         for (let Vi = VADiv.length - 1; Vi >= 0; Vi--) {
+          $("#IBackground").css("transform", "scale(1." + Vi + ")");
+
           let VDireita = Vi % 2 == 0;
           let VTranslateX = $(VADiv[Vi]).attr("translateX") != undefined ? parseInt($(VADiv[Vi]).attr("translateX")) : 0;
           let VTranslateY = $(VADiv[Vi]).attr("translateY") != undefined ? parseInt($(VADiv[Vi]).attr("translateY")) : 0;
@@ -36,22 +44,12 @@ $(document).ready(function () {
           }
         }
       }
-
-      if ($(VADiv[0]).attr("translateZ") == 200) {
-        VTempo = setTimeout(function() {
-          $(".circulo:not(:nth-child(1))").attr("translateX", 0); // Horizontal
-          $(".circulo:not(:nth-child(1))").attr("translateY", 0); // Vertical
-          $(".circulo:not(:nth-child(1))").attr("translateZ", 0); // Tamanho
-          $(".circulo:not(:nth-child(1))").attr("rotateY", 0); // Rotação
-          $(".circulo:not(:nth-child(1))").css("transform", "translateX(" + 0 + "px) translateY(" + 0 + "px) translateZ(" + 0 + "px) rotateY(" + 0 + "deg)");
-          $(".circulo:not(:nth-child(1))").css("display", "none");
-        }, 2000);
-      }
-
     } else {
-      clearTimeout(VTempo);
       for (let Vi = 0; Vi < VADiv.length; Vi++) {
         if ($(VADiv[Vi]).css("display") == "block") {
+
+          $("#IBackground").css("transform", "scale(1." + Vi + ")");
+
           let VDireita = Vi % 2 == 0;
           let VTranslateX = $(VADiv[Vi]).attr("translateX") != undefined ? parseInt($(VADiv[Vi]).attr("translateX")) : 0;
           let VTranslateY = $(VADiv[Vi]).attr("translateY") != undefined ? parseInt($(VADiv[Vi]).attr("translateY")) : 0;

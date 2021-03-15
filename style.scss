@@ -6,10 +6,13 @@ $c-sombra: 6px 6px 12px rgba(52, 58, 64, 1);
 $c-white: #fff;
 
 body {
-  background: $b-principal;
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
   overflow: $o-hidden;
+
+  #IBackground {
+    position: absolute;
+    transform: scale(1);
+    transition: transform 1s, top 1s;
+  }
 
   .mesa {
     perspective: 100vw;

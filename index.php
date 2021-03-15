@@ -23,31 +23,42 @@
   <div class="mesa">
 
     <div id="DBlog" class="circulo">
+      <p>Infraestrutura de Servidores</p>
       <img src="./imgs/infra-server.png" alt="">
     </div>
     <div class="circulo">
+      <p>EStrutura de Cloud</p>
       <img src="./imgs/estrutura-cloud.png" alt="">
     </div>
     <div class="circulo">
+      <p>Banco de Dados</p>
       <img src="./imgs/bd.png" alt="">
     </div>
     <div class="circulo">
+      <p>Linguagens de Pragramação</p>
       <img src="./imgs/ling-programacao.png" alt="">
     </div>
     <div class="circulo">
+      <p>Servidores de Cloud</p>
       <img src="./imgs/cloud-servers.png" alt="">
     </div>
     <div class="circulo">
+      <p>Frameworks</p>
       <img src="./imgs/frameworks.png" alt="">
     </div>
     <div class="circulo">
+      <p>CMS Sistemas de Gerenciamento de Conteúdo</p>
       <img src="./imgs/CMS.png" alt="">
     </div>
     <div class="circulo">
+      <p>Opensource</p>
       <img src="./imgs/opensource.png" alt="">
     </div>
-
+    
   </div>
-
+   <!-- configuração de scroll <div><span data-radium="true">Desça a tela para<br>conhecer a P&amp;G</span>
+    <div class="scroll-mouse">  
+    <div class="scroll-wheel"></div></div></div> -->
+  
 </body>
 </html>

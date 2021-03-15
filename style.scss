@@ -1,6 +1,9 @@
+// sass-lint:disable nesting-depth, no-ids
+
 $b-principal: url('./imgs/background.png');
 $o-hidden: hidden;
-$c-sombra: 6px 6px 12px rgba(52,58,64,1);
+$c-sombra: 6px 6px 12px rgba(52, 58, 64, 1);
+$c-white: #fff;
 
 body {
   background: $b-principal;
@@ -21,16 +24,10 @@ body {
       transition: transform 1s;
       width: 200px;
 
-      &:nth-child(1)
-      {
-        display: block;
+      p {
+        color: $c-white;
+        position: absolute;
       }
-
-      //&:nth-child(odd) {
-      //}
-
-      //&:nth-child(even) {
-      //}
 
       img {
         border-radius: 50%;
@@ -38,7 +35,67 @@ body {
         height: 100%;
         width: 100%;
       }
-    }
 
+      &#DInfra {
+        p {
+          left: 2px;
+          top: 87px;
+        }
+      }
+
+      &#DCloud {
+        p {
+          left: 26px;
+          top: 109px;
+        }
+      }
+
+      &#DBd {
+        p {
+          left: 41px;
+          top: 98px;
+        }
+      }
+
+      &#DLingProg {
+        p {
+          left: 0;
+          top: 84px;
+        }
+      }
+
+      &#DServCloud {
+        p {
+          left: 28px;
+          top: 105px;
+        }
+      }
+
+      &#DFrameworks {
+        p {
+          left: 57px;
+          top: 106px;
+        }
+      }
+
+      &#DCMS {
+        p {
+          right: 22px;
+          text-align: right;
+          top: 88px;
+        }
+      }
+
+      &#DOpenSource {
+        p {
+          left: 58px;
+          top: 108px;
+        }
+      }
+
+      &:nth-child(1) {
+        display: block;
+      }
+    }
   }
 }

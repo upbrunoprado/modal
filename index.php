@@ -22,35 +22,35 @@
 
   <div class="mesa">
 
-    <div id="DBlog" class="circulo">
+    <div id="DInfra" class="circulo">
       <p>Infraestrutura de Servidores</p>
       <img src="./imgs/infra-server.png" alt="">
     </div>
-    <div class="circulo">
-      <p>EStrutura de Cloud</p>
+    <div id="DCloud" class="circulo">
+      <p>Estrutura de Cloud</p>
       <img src="./imgs/estrutura-cloud.png" alt="">
     </div>
-    <div class="circulo">
+    <div id="DBd" class="circulo">
       <p>Banco de Dados</p>
       <img src="./imgs/bd.png" alt="">
     </div>
-    <div class="circulo">
+    <div id="DLingProg" class="circulo">
       <p>Linguagens de Pragramação</p>
       <img src="./imgs/ling-programacao.png" alt="">
     </div>
-    <div class="circulo">
+    <div id="DServCloud" class="circulo">
       <p>Servidores de Cloud</p>
       <img src="./imgs/cloud-servers.png" alt="">
     </div>
-    <div class="circulo">
+    <div id="DFrameworks" class="circulo">
       <p>Frameworks</p>
       <img src="./imgs/frameworks.png" alt="">
     </div>
-    <div class="circulo">
+    <div id="DCMS" class="circulo">
       <p>CMS Sistemas de Gerenciamento de Conteúdo</p>
       <img src="./imgs/CMS.png" alt="">
     </div>
-    <div class="circulo">
+    <div id="DOpenSource" class="circulo">
       <p>Opensource</p>
       <img src="./imgs/opensource.png" alt="">
     </div>

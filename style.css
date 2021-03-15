@@ -25,8 +25,9 @@ body .mesa .circulo {
   width: 200px;
 }
 
-body .mesa .circulo:nth-child(1) {
-  display: block;
+body .mesa .circulo p {
+  color: #fff;
+  position: absolute;
 }
 
 body .mesa .circulo img {
@@ -37,29 +38,48 @@ body .mesa .circulo img {
   width: 100%;
 }
 
-/*.scroll-mouse {
-  margin-top: 12px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 15px;
-  height: 27px;
-  border: 1px solid #fff;
-  border-radius: 7.5px;
-  display: inline-block;
-  position: relative;
+body .mesa .circulo#DInfra p {
+  left: 2px;
+  top: 87px;
 }
 
-.scroll-wheel {
-  position: absolute;
-  left: 5.2px;
-  top: 17px;
-  background-color: #fff;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-animation: mouse-wheel 2s ease-in-out infinite;
-  animation: mouse-wheel 2s ease-in-out infinite;
-}*/
+body .mesa .circulo#DCloud p {
+  left: 26px;
+  top: 109px;
+}
 
+body .mesa .circulo#DBd p {
+  left: 41px;
+  top: 98px;
+}
+
+body .mesa .circulo#DLingProg p {
+  left: 0;
+  top: 84px;
+}
+
+body .mesa .circulo#DServCloud p {
+  left: 28px;
+  top: 105px;
+}
+
+body .mesa .circulo#DFrameworks p {
+  left: 57px;
+  top: 106px;
+}
+
+body .mesa .circulo#DCMS p {
+  right: 22px;
+  text-align: right;
+  top: 88px;
+}
+
+body .mesa .circulo#DOpenSource p {
+  left: 58px;
+  top: 108px;
+}
+
+body .mesa .circulo:nth-child(1) {
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

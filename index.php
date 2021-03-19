@@ -23,8 +23,8 @@
 
   <div class="mesa">
     <div id="DInfra" class="circulo">
-      <p>Infraestrutura de Servidores</p>
-      <img src="./imgs/infra-server.png" alt="">
+      <p></p>
+      <a href="http://www.modalnetworks.com/v1/"><img src="./imgs/infra-server.png" alt=""></a>
     </div>
     <div id="DCloud" class="circulo">
       <p>Estrutura de Cloud</p>
@@ -53,6 +53,10 @@
     <div id="DOpenSource" class="circulo">
       <p>Opensource</p>
       <img src="./imgs/opensource.png" alt="">
+    </div>
+    <div id="DOpenSource" class="circulo">
+      <p>Infra Server</p>
+      <img src="./imgs/infra-server2.png" alt="">
     </div>
   </div>
 

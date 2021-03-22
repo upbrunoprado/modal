@@ -115,8 +115,9 @@ $(document).ready(function () {
     console.log("swiperight");
   });
 
-  $("#DCloud").on("click", function(){
-    window.location.href = "https://dsfadsfas.com/site";
+  $(".circulo").on("click", function(){
+    if ($(this).attr("href") != undefined)
+      window.location.href = $(this).attr("href");
   });
 
 });

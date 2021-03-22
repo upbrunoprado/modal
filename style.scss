@@ -20,6 +20,7 @@ body {
     transform-style: preserve-3d;
 
     .circulo {
+      cursor: pointer;
       display: none;
       height: 200px;
       left: calc(100vw - calc(50vw + 100px));

@@ -22,9 +22,9 @@
   <img id="IBackground" src="./imgs/background.png" alt="">
 
   <div class="mesa">
-    <div id="DInfra" class="circulo">
+    <div id="DInfra" href="http://www.modalnetworks.com/v1/" class="circulo">
       <p></p>
-      <a href="http://www.modalnetworks.com/v1/"><img src="./imgs/infra-server.png" alt=""></a>
+      <img src="./imgs/infra-server.png" alt="">
     </div>
     <div id="DCloud" class="circulo">
       <p>Estrutura de Cloud</p>

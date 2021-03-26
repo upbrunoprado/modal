@@ -62,7 +62,7 @@
       <p>Entre em contato conosco</p>
       <p>Tel: (11) 9.919-2060 / (11) 5587-3674</p>
       <p><a href="mailto:info@modalnetworks.com">info@modalnetworks.com</a></p>
-      <img src="./imgs/infra-server2.png" alt="">
+      <img src="./imgs/contato.png" alt="">
     </div>
   </div>
 

@@ -1,81 +1,111 @@
 $(document).ready(function () {
 
-  VTempo = null;
+  $(window).on("resize", function()
+  {
+    if ($(window).width() < 768)
+    {
+      $(".circulo").css("display", "none");
+      $("#DContato").css("display", "block");
+      $("#DContato").attr("translateX", 0);
+      $("#DContato").attr("translateY", 0);
+      $("#DContato").attr("translateZ", 0);
+      $("#DContato").attr("rotateY", 0);
+      $("#DContato").css("transform", "translateX(0px) translateY(0) translateZ(0) rotateY(0deg)");
+    }
+    else
+    {
+      $(".circulo").css("display", "none");
+      $(".circulo").attr("translateX", 0);
+      $(".circulo").attr("translateY", 0);
+      $(".circulo").attr("translateZ", 0);
+      $(".circulo").attr("rotateY", 0);
+      $(".circulo").css("transform", "translateX(0px) translateY(0) translateZ(0) rotateY(0deg)");
+      $("#DInfra").css("display", "block");
+    }
+  });
+
+  if ($(window).width() < 768)
+    $(window).trigger('resize');
+
+  let VTempo = null;
   $(window).on("mousewheel", function(e)
   {
-    // Mouse
-    let VSobe = e.originalEvent.wheelDelta > 0;
-    let VADiv = $(".circulo");
-
-    if (VSobe)
+    if ($(window).width() >= 768)
     {
-      if ($(VADiv[0]).attr("translateZ") >= 200) {
-        /*
-        if (parseFloat($("#IBackground").css("zoom")) >= 0.76)
-        {
-          $("#IBackground").css("zoom", $("#IBackground").css("zoom") - 0.02);
-          $("#IBackground").css("top", "calc(" + $("#IBackground").css("top") + " + 12px)");
-        }/* */
-        for (let Vi = VADiv.length - 1; Vi >= 0; Vi--) {
-          if ($(window).width() >= 768) {
-            $("#IBackground").css("transform", "scale(1." + Vi + ")");
-          }
+      // Mouse
+      let VSobe = e.originalEvent.wheelDelta > 0;
+      let VADiv = $(".circulo");
 
-          let VDireita = Vi % 2 == 0;
-          let VTranslateX = $(VADiv[Vi]).attr("translateX") != undefined ? parseInt($(VADiv[Vi]).attr("translateX")) : 0;
-          let VTranslateY = $(VADiv[Vi]).attr("translateY") != undefined ? parseInt($(VADiv[Vi]).attr("translateY")) : 0;
-          let VTranslateZ = $(VADiv[Vi]).attr("translateZ") != undefined ? parseInt($(VADiv[Vi]).attr("translateZ")) : 0;
-          let VRotateY = $(VADiv[Vi]).attr("rotateY") != undefined ? parseInt($(VADiv[Vi]).attr("rotateY")) : 0;
+      if (VSobe)
+      {
+        if ($(VADiv[0]).attr("translateZ") >= 200) {
+          /*
+          if (parseFloat($("#IBackground").css("zoom")) >= 0.76)
+          {
+            $("#IBackground").css("zoom", $("#IBackground").css("zoom") - 0.02);
+            $("#IBackground").css("top", "calc(" + $("#IBackground").css("top") + " + 12px)");
+          }/* */
+          for (let Vi = VADiv.length - 1; Vi >= 0; Vi--) {
+            if ($(window).width() >= 768) {
+              $("#IBackground").css("transform", "scale(1." + Vi + ")");
+            }
 
-          let VCss = zoomIco(VSobe, VDireita, VTranslateX, VTranslateY, VTranslateZ, VRotateY);
+            let VDireita = Vi % 2 == 0;
+            let VTranslateX = $(VADiv[Vi]).attr("translateX") != undefined ? parseInt($(VADiv[Vi]).attr("translateX")) : 0;
+            let VTranslateY = $(VADiv[Vi]).attr("translateY") != undefined ? parseInt($(VADiv[Vi]).attr("translateY")) : 0;
+            let VTranslateZ = $(VADiv[Vi]).attr("translateZ") != undefined ? parseInt($(VADiv[Vi]).attr("translateZ")) : 0;
+            let VRotateY = $(VADiv[Vi]).attr("rotateY") != undefined ? parseInt($(VADiv[Vi]).attr("rotateY")) : 0;
 
-          $(VADiv[Vi]).attr("translateX", VCss.translateX); // Horizontal
-          $(VADiv[Vi]).attr("translateY", VCss.translateY); // Vertical
-          $(VADiv[Vi]).attr("translateZ", VCss.translateZ); // Tamanho
-          $(VADiv[Vi]).attr("rotateY", VCss.rotateY); // Rotação
-          $(VADiv[Vi]).css("transform", "translateX(" + VCss.translateX + "px) translateY(" + VCss.translateY + "px) translateZ(" + VCss.translateZ + "px) rotateY(" + VCss.rotateY + "deg)");
+            let VCss = zoomIco(VSobe, VDireita, VTranslateX, VTranslateY, VTranslateZ, VRotateY);
+
+            $(VADiv[Vi]).attr("translateX", VCss.translateX); // Horizontal
+            $(VADiv[Vi]).attr("translateY", VCss.translateY); // Vertical
+            $(VADiv[Vi]).attr("translateZ", VCss.translateZ); // Tamanho
+            $(VADiv[Vi]).attr("rotateY", VCss.rotateY); // Rotação
+            $(VADiv[Vi]).css("transform", "translateX(" + VCss.translateX + "px) translateY(" + VCss.translateY + "px) translateZ(" + VCss.translateZ + "px) rotateY(" + VCss.rotateY + "deg)");
 
 
-          // Para voltar 1 de cada vez
-          if (VADiv[Vi - 1] != undefined) {
-            let Vj = Vi;
-            if ($(VADiv[Vi - 1]).attr("translateZ") == "1000" && VCss.translateZ >= 800)
-              Vi = -1;
-            else
-              Vi = Vj;
+            // Para voltar 1 de cada vez
+            if (VADiv[Vi - 1] != undefined) {
+              let Vj = Vi;
+              if ($(VADiv[Vi - 1]).attr("translateZ") == "1000" && VCss.translateZ >= 800)
+                Vi = -1;
+              else
+                Vi = Vj;
+            }
           }
         }
-      }
-    } else {
-      for (let Vi = 0; Vi < VADiv.length; Vi++) {
-        if ($(VADiv[Vi]).css("display") == "block") {
-          if ($(window).width() >= 768) {
-            $("#IBackground").css("transform", "scale(1." + Vi + ")");
-          }
+      } else {
+        for (let Vi = 0; Vi < VADiv.length; Vi++) {
+          if ($(VADiv[Vi]).css("display") == "block") {
+            if ($(window).width() >= 768) {
+              $("#IBackground").css("transform", "scale(1." + Vi + ")");
+            }
 
-          let VDireita = Vi % 2 == 0;
-          let VTranslateX = $(VADiv[Vi]).attr("translateX") != undefined ? parseInt($(VADiv[Vi]).attr("translateX")) : 0;
-          let VTranslateY = $(VADiv[Vi]).attr("translateY") != undefined ? parseInt($(VADiv[Vi]).attr("translateY")) : 0;
-          let VTranslateZ = $(VADiv[Vi]).attr("translateZ") != undefined ? parseInt($(VADiv[Vi]).attr("translateZ")) : 0;
-          let VRotateY = $(VADiv[Vi]).attr("rotateY") != undefined ? parseInt($(VADiv[Vi]).attr("rotateY")) : 0;
+            let VDireita = Vi % 2 == 0;
+            let VTranslateX = $(VADiv[Vi]).attr("translateX") != undefined ? parseInt($(VADiv[Vi]).attr("translateX")) : 0;
+            let VTranslateY = $(VADiv[Vi]).attr("translateY") != undefined ? parseInt($(VADiv[Vi]).attr("translateY")) : 0;
+            let VTranslateZ = $(VADiv[Vi]).attr("translateZ") != undefined ? parseInt($(VADiv[Vi]).attr("translateZ")) : 0;
+            let VRotateY = $(VADiv[Vi]).attr("rotateY") != undefined ? parseInt($(VADiv[Vi]).attr("rotateY")) : 0;
 
-          let VCss = zoomIco(VSobe, VDireita, VTranslateX, VTranslateY, VTranslateZ, VRotateY);
-          //console.log('VCss', VCss)
+            let VCss = zoomIco(VSobe, VDireita, VTranslateX, VTranslateY, VTranslateZ, VRotateY);
+            //console.log('VCss', VCss)
 
-          $(VADiv[Vi]).attr("translateX", VCss.translateX); // Horizontal
-          $(VADiv[Vi]).attr("translateY", VCss.translateY); // Vertical
-          $(VADiv[Vi]).attr("translateZ", VCss.translateZ); // Tamanho
-          $(VADiv[Vi]).attr("rotateY", VCss.rotateY); // Rotação
-          $(VADiv[Vi]).css("transform", "translateX(" + VCss.translateX + "px) translateY(" + VCss.translateY + "px) translateZ(" + VCss.translateZ + "px) rotateY(" + VCss.rotateY + "deg)");
+            $(VADiv[Vi]).attr("translateX", VCss.translateX); // Horizontal
+            $(VADiv[Vi]).attr("translateY", VCss.translateY); // Vertical
+            $(VADiv[Vi]).attr("translateZ", VCss.translateZ); // Tamanho
+            $(VADiv[Vi]).attr("rotateY", VCss.rotateY); // Rotação
+            $(VADiv[Vi]).css("transform", "translateX(" + VCss.translateX + "px) translateY(" + VCss.translateY + "px) translateZ(" + VCss.translateZ + "px) rotateY(" + VCss.rotateY + "deg)");
 
 
-          if (VCss.translateZ == 400 && VADiv[Vi + 1] != undefined) {
-            $(VADiv[Vi + 1]).css("display", "block");
-            $(VADiv[Vi + 1]).attr("translateX", 0);
-            $(VADiv[Vi + 1]).attr("translateY", 0);
-            $(VADiv[Vi + 1]).attr("translateZ", 0);
-            $(VADiv[Vi + 1]).attr("rotateY", 0);
-            $(VADiv[Vi + 1]).css("transform", "translateX(0px) translateY(0) translateZ(0) rotateY(0deg)");
+            if (VCss.translateZ == 400 && VADiv[Vi + 1] != undefined) {
+              $(VADiv[Vi + 1]).css("display", "block");
+              $(VADiv[Vi + 1]).attr("translateX", 0);
+              $(VADiv[Vi + 1]).attr("translateY", 0);
+              $(VADiv[Vi + 1]).attr("translateZ", 0);
+              $(VADiv[Vi + 1]).attr("rotateY", 0);
+              $(VADiv[Vi + 1]).css("transform", "translateX(0px) translateY(0) translateZ(0) rotateY(0deg)");
+            }
           }
         }
       }

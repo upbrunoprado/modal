@@ -98,6 +98,33 @@ body {
         }
       }
 
+      &#DContato {
+        p {
+          width: 100%;
+
+          a {
+            color: white;
+          }
+
+          &:nth-child(1) {
+            left: 9px;
+            top: 60px;
+          }
+
+          &:nth-child(2) {
+            font-size: 11.7px;
+            left: 5px;
+            top: 98px;
+          }
+
+          &:nth-child(3) {
+            font-size: 11.7px;
+            left: 32px;
+            top: 133px;
+          }
+        }
+      }
+
       &:nth-child(1) {
         display: block;
       }

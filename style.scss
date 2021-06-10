@@ -7,12 +7,15 @@ $c-white: #fff;
 
 body {
   overflow: $o-hidden;
-  -webkit-overflow-scrolling: touch;
+  //-webkit-overflow-scrolling: touch;
 
-  #IBackground {
+  .background
+  {
+    height: 100%;
     position: absolute;
     transform: scale(1);
-    transition: transform 5s, top 5s;
+    transition: opacity 2s, top 5s, transform 5s;
+    width: 100%;
   }
 
   .mesa {
@@ -26,7 +29,7 @@ body {
       left: calc(100vw - calc(50vw + 100px));
       position: absolute;
       top: calc(100vh - calc(50vh + 100px));
-      transition: transform 1s;
+      transition: opacity 1s, transform 1s;
       width: 200px;
 
       p {
@@ -38,6 +41,7 @@ body {
         border-radius: 50%;
         box-shadow: $c-sombra;
         height: 100%;
+        transition: border-radius 1s;
         width: 100%;
       }
 
@@ -103,7 +107,7 @@ body {
           width: 100%;
 
           a {
-            color: white;
+            color: $c-white;
           }
 
           &:nth-child(1) {

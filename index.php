@@ -19,10 +19,12 @@
 </head>
 <body>
 
-  <img id="IBackground" src="./imgs/background.png" alt="">
+  <img id="IBackground3" src="./imgs/back3.jpg" class="background">
+  <img id="IBackground2" src="./imgs/back2.jpg" class="background">
+  <img id="IBackground1" src="./imgs/background.png" class="background">
 
   <div class="mesa">
-    <div id="DInfra" href="http://www.modalnetworks.com/v1/" class="circulo">
+    <div id="DInfra" href="" class="circulo">
       <p></p>
       <img src="./imgs/infra-server.png" alt="">
     </div>
@@ -34,13 +36,13 @@
       <p>Banco de Dados</p>
       <img src="./imgs/bd.png" alt="">
     </div>
-    <div id="DLingProg" class="circulo">
-      <p>Linguagens de Pragramação</p>
-      <img src="./imgs/ling-programacao.png" alt="">
-    </div>
     <div id="DServCloud" class="circulo">
       <p>Servidores de Cloud</p>
       <img src="./imgs/cloud-servers.png" alt="">
+    </div>
+    <div id="DLingProg" class="circulo">
+      <p>Linguagens de Pragramação</p>
+      <img src="./imgs/ling-programacao.png" alt="">
     </div>
     <div id="DFrameworks" class="circulo">
       <p>Frameworks</p>
@@ -60,14 +62,14 @@
     </div>
     <div id="DContato" class="circulo">
       <p>Entre em contato conosco</p>
-      <p>Tel: (11) 9.919-2060 / (11) 5587-3674</p>
+      <p>Tel: (11) 9.9149-2060 / (11) 5587-3674</p>
       <p><a href="mailto:info@modalnetworks.com">info@modalnetworks.com</a></p>
-      <img src="./imgs/infra-server2.png" alt="">
+      <img src="./imgs/contato.png" alt="">
     </div>
   </div>
 
   <div class="footer">
-    Desça a tela para<br>conhecer +</span>
+    Subir a tela para<br>conhecer +</span>
     <div class="d-flex">
       <img src="imgs/scroll.gif" alt="" class="m-auto">
     </div>
